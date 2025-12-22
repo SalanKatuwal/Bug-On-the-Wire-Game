@@ -1,32 +1,36 @@
-import { score } from "./initialize.js";
+import { myCanva, score } from "./initialize.js";
 export class Background {
     constructor(gameWidth, gameHeight) {
         this.gameHeight = gameHeight;
         this.gameWidth = gameWidth;
-        this.image1 = new Image();
-        this.image1.src = "photos/bg.jpg"
+        this.bg_image = new Image();
+        this.bg_image.src = "photos/sky.jpg";
         this.loaded1 = false;
-        this.image1.onload = () => {
+        this.bg_image.onload = () => {
             this.loaded1 = true;
         };
         this.x = 0;
         this.y = 0;
         this.speed = 20;
-        this.height = 4001;
-        this.width = 6001;
+        this.width = 2048;
     }
     draw(ctx) {
-        if (this.loaded1) {
-            ctx.drawImage(this.image1, this.x, this.y, 6001, 4001);
-            ctx.drawImage(this.image1, this.x + this.width, this.y, this.width, this.height);
-        }
+        if (!this.loaded1) return;
+
+        let x = this.x % this.width;
+
+        if (x > 0) x -= this.width;
+
+        ctx.drawImage(this.bg_image, x, this.y, this.width, myCanva.height);
+        ctx.drawImage(this.bg_image, x + this.width, this.y, this.width, myCanva.height);
     }
+
     update(input) {
         if (input.keys.indexOf("ArrowRight") > -1 || input.keys.indexOf("d") > -1) {
-            if (score > 15) {
+            if (score > 50) {
                 this.speed = 27;
             }
-            else if (score > 50) {
+            else if (score > 15) {
                 this.speed = 35;
             }
             else {

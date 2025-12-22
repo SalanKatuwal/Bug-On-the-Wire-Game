@@ -1,4 +1,4 @@
-import { score } from "./initialize.js";
+import { score, wiresPos } from "./initialize.js";
 let crowXIndex = 1;
 let crowSpacing = 300;
 export class Crow {
@@ -15,8 +15,9 @@ export class Crow {
             // increase crow width as speed increases
             crowSpacing = 1200;  
         }
-        this.pos = [335, 435, 535];
-        this.crowY = this.pos[Math.floor(Math.random() * 3)];
+        this.pos = [wiresPos[0] - 50, wiresPos[1] - 50, wiresPos[2] - 50];
+        this.crowIndex = Math.floor(Math.random()*3)
+        this.crowY = this.pos[this.crowIndex];
         this.spritHeight = 180;
         this.spritWidth = 250;
         this.speed = 10;

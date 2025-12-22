@@ -57,16 +57,14 @@ export function startGame() {
     enemyTimer = 0;
     enemyInterval = 1500;
     input = new InputHandler();
-    wiresPos = [400, 500, 600];
+    wiresPos = [myCanva.height/2, myCanva.height/1.65, myCanva.height/1.40];
     wires = new Wires();
     bug = new Bug();
     backgroundAudio.play();
     background = new Background(myCanva.width, myCanva.height);
     animate(0);
 }
-
-startGame();
-
+    
 
 function displayScore(ctx) {
     ctx.fillStyle = 'Red';

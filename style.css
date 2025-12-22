@@ -1,13 +1,38 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body {
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
+    background-color: bisque;
+}
 
+.intro-screen {
+    position: fixed;
+    background-color: rgb(85, 56, 17);
+    color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.intro-screen button {
+    padding: 12px 24px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+canvas{
+    height: 100% !important;
+    width: 100% !important;
 }
 
 img {
@@ -25,13 +50,13 @@ img {
     background-image: url(photos/game_over.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 2rem;
+    padding: clamp(0.875rem, 0.071rem + 2.143vh, 2rem);
     display: none;
-    gap: 2rem;
+    gap: clamp(0.875rem, 0.071rem + 2.143vh, 2rem);
 }
 
 h1 {
-    font-size: 100px;
+    font-size: clamp(2.813rem, 0.357rem + 6.548vH, 6.25rem);
     font-family: doto;
 }
 #powerUp{
@@ -45,7 +70,7 @@ h1 {
 }
 p,
 button {
-    font-size: 20px;
+    font-size: clamp(0.875rem, 0.607rem + 0.714vh, 1.25rem);
     font-family: oswald;
 }
 

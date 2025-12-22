@@ -18,7 +18,7 @@ Dodge incoming crows, collect power-ups, survive as long as you can, and beat yo
 
 You can play the deployed version here: 
 
-https://salankatuwal.github.io/Bug-On-the-Wire-Game/
+https://game-assignment-482336.pages.bajratechnologies.com/
 
 ### Technologies Used
 
@@ -28,14 +28,14 @@ https://salankatuwal.github.io/Bug-On-the-Wire-Game/
 
 -   CSS3
 
--   Git / GitHub for deployment
+-   Git / GitLab (for CI/CD deployment)
 
 
 ### ⚙️ How to Run Locally
 ```
 Clone the repository:
 
-git clone https://github.com/SalanKatuwal/Bug-On-the-Wire-Game.git
+git clone https://git.bajratechnologies.com/j-25-11/j-25-11-python/salan-katuwal/game_assignment.git
 ```
 
 Open index.html in any browser
@@ -52,9 +52,4 @@ You can freely clone, modify, and deploy it on:
 -    Netlify
 -    Vercel
 
-### Appendix
-- Game Screen
-![Game](/photos/game.png)
 
-- Game Over Screen
-![Game Over](/photos/Game%20Over.png)

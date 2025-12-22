@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bug on the wire Game</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="app.js" defer></script> -->
+    <script type="module" src="intro.js"></script>
     <script type="module" src="initialize.js" defer></script>
     <script type="module" src="input_handler.js" defer></script>
     <script type="module" src="wire.js" defer></script>
@@ -14,19 +14,33 @@
     <script type="module" src="background.js" defer></script>
     <script type="module" src="crow.js" defer></script>
 </head>
-    
+
 <body>
+    <div id="introScreen" class="intro-screen">
+        <h1>Bug on the Wire </h1>
+        <p>
+            Guide the bug along the electric wires.<br>
+            Avoid the crows and survive as long as possible!
+        </p>
+
+        <h3>Controls</h3>
+        <p>⬆⬇ Move Bug<br>⬅➡ Control Speed</p>
+
+        <button id="startGameBtn">Play Game</button>
+    </div>
+
     <canvas>
     </canvas>
-    <h2 id="powerUp"></h1>
-    <div class="game_over">
-        <h1>Game Over</h1>
-        <p>Your Score: <span id="score"></span></p>
-        <p>High Score: <span id="highScore"></span></p>
-        <button id="restart">Restart</button>
-    </div>
-    <audio src="photos/audio.mp3" loop id="audio"></audio>
-    <audio src="photos/crow_sound.mp3" id="crow_sound"></audio>
+    <h2 id="powerUp">
+        </h1>
+        <div class="game_over">
+            <h1>Game Over</h1>
+            <p>Your Score: <span id="score"></span></p>
+            <p>High Score: <span id="highScore"></span></p>
+            <button id="restart">Restart</button>
+        </div>
+        <audio src="photos/audio.mp3" loop id="audio"></audio>
+        <audio src="photos/crow_sound.mp3" id="crow_sound"></audio>
 </body>
 
 </html>
